@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* Color scheme hex code: brown-#553f3a; red-#bb2b2a; baige-#fff9e9; light blue-#ccdee2; blue-4b9ab4*/
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff9e9;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.first {
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#top {
+  text-align: center;
+}
+
+#links {
+  font-size: 15px;
+}
+
+#your-name {
+  background-color: #fff9e9;
+  border: 4px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+#button {
+  padding: 2px;
+}

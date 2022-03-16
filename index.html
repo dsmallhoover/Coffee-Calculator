@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="style.css" rel="stylesheet" />
+    <title>Coffee Calculators</title>
+    <link rel="icon" type="image/x-icon" href="icons8-calculator-64.png">
+  </head>
+  <body>
+    <h1 id="top">Coffee Calculators</h1>
+    <p class="first">
+      Introduction paragraph
+    </p>
+    <img src="coffeecup.png"alt="Coffee Cup" style="float: left; width: 100px; height: 100px;"></img>
+    <div id="links">
+    <a href = "#weight_converter">Weight Converter</a><br /> 
+    <a href="#roast_loss_calculator">Roast Loss Calculator</a><br />
+    <a href="#projected_coffee_runout">Projected Coffee Runout</a><br/>
+    <a href="#actual_green_coffee">Actual Green Coffee Cost (Freight)</a><br />
+    <a href="#actual_green_carry">Actual Green Coffee Cost (Projected Carry)</a><br /></body>
+    </div>
+
+    <main>
+      <header>
+          <h2 id="weight_converter">1. Weight Converter</h2>
+      </header>
+      <form>
+      <section class="inputs">
+          <p><b>Pounds:</b></p>
+          <input type="number" name="pounds" id="pounds" class="input" placeholder="Pounds">
+          <p><b>Kilograms:</b></p><input type="number" name="kilograms" id="kilograms" class="input" placeholder="Kilograms">
+          <p><b>Grams:</b></p><input type="number" name="grams" id="grams" class="input" placeholder="Grams">
+          <p><b>Ounces:</b></p><input type="number" name="ounces" id="ounces" class="input" placeholder="Ounces"><br>
+          <button type="reset" value="Reset">Clear</button>
+      </section>
+    </form>
+  </main>
+
+    <h2 id="roast_loss_calculator">2. Roast Loss Calculator</h2>
+      <p class="second">
+        Macro calculation of roast loss based on bags of coffee.
+      </p>
+    
+    <form id="roast-calc">
+      <input type="text" id="green" />Green Weight(kg)<br />
+
+      <input type="text" id="shrinkage" />Estimated Shrinkage(%)<br />
+
+      <button type="button" id="button" onclick="calc()">Calculate</button>
+      <button type="reset" value="Reset">Clear</button>
+      <br />
+      Total Roasted Weight:<br />
+      <input type="text" value="" id="s1">
+      <button onclick="copyClipboard()">Copy text</button>
+  
+      <div id="result" style="display: none;"></div>
+    </form>
+
+
+    <h2 id="projected_coffee_runout">3. Projected Coffee Runout</h2>
+    <p class="second">
+      Proper timing for rollouts, exiting, and contracting coffees are based on
+      projections. Use the Estimated Roasted Coffee End Weight.
+    </p>
+
+    <form id="runout">
+      <input type="text" id="roasted" />Total Roasted Weight<br />
+
+      <input type="text" id="weekly" />Weekly Coffee Sold<br />
+
+      <button type="button" id="button2" onclick="runout()">Calculate</button>
+      <button type="reset" value="Reset">Clear</button>
+      <br />
+      Projected Runout (weeks):<br />
+      <input type="text" value="" id="s2">
+      <div id="result2" style="display: none;"></div>
+    </form>
+
+    
+
+    <h2 id="actual_green_coffee">4. Actual Green Coffee Cost (Freight)</h2>
+    <p class="third">
+      Incorporating freight provides a better picture of that coffee's profit.
+      Average freight of $200 per 10 bags is used for calculation.
+    </p>
+
+    <form id="actual-green">
+      <input type="text" id="green-cost" />Green Coffee / lb.<br />
+
+      <input type="text" id="bags" />Number of Bags<br />
+      <input type="text" id="weight-bag" />Weight per bag (kg)<br />
+
+      <button type="button" id="button3" onclick="actual()">Calculate</button>
+      <button type="reset" value="Reset">Clear</button>
+      <br />
+      Actual Green Coffee Cost:<br />
+    </form>
+
+    <div id="result3"></div>
+
+    <h2 id="actual_green_carry">5. Actual Green Coffee Cost (Projected Carry)</h2>
+    <p class="fourth">
+      In the decision-making process of green coffee contracts, understanding
+      the potential carry charges over the lifespan of that particular coffee is
+      crucial. Incorporate Calc. 3. (freight) above for a truer cost evaluation.
+      Use Calc. 2 (runout) to estimate the per month release schedule below.
+    </p>
+
+    <form id="actual-carry">
+      <input type="text" id="green-cost2" />Green Coffee / lb.<br />
+      <input type="text" id="number-bags" />Number of Bags
+      <br />
+
+      <input type="text" id="weight-bag" />Weight per bag (kg)<br />
+      <input type="text" id="carry" />Carry Rate (%)<br />
+      <table>
+        <tr>
+          <th>1st Month (0%)</th>
+          <th>2nd Month (1.3%)</th>
+          <th>3rd Month (2.6%)</th>
+          <th>4th Month (3.9%)</th>
+        </tr>
+        <td>
+          <input
+            type="text"
+            id="bags-contract"
+            placeholder="# of bags released"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="bags-contract"
+            placeholder="# of bags released"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="bags-contract"
+            placeholder="# of bags released"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="bags-contract"
+            placeholder="# of bags released"
+          />
+        </td>
+      </table>
+      <button type="button" id="button3" onclick="actual()">Calculate</button>
+      <button type="reset" value="Reset">Clear</button>
+      <br />
+      Actual Green Coffee Cost:<br />
+    </form>
+
+    <div id="result3"></div>
+
+    <form id="your-name">
+      <h2>Your name here</h2>
+      <p class="first">Please fill in this form.</p>
+
+      <input type="text" placeholder="Your name" />
+      <button>OK!</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
