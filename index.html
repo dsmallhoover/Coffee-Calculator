@@ -12,16 +12,19 @@
   <body>
     <h1 id="top">Coffee Calculators</h1>
     <p class="first">
-      Introduction paragraph
+      Some quick calculations for roasters and green coffee buyers
     </p>
-    <img src="coffeecup.png"alt="Coffee Cup" style="float: left; width: 100px; height: 100px;"></img>
-    <div id="links">
-    <a href = "#weight_converter">Weight Converter</a><br /> 
-    <a href="#roast_loss_calculator">Roast Loss Calculator</a><br />
-    <a href="#projected_coffee_runout">Projected Coffee Runout</a><br/>
-    <a href="#actual_green_coffee">Actual Green Coffee Cost (Freight)</a><br />
-    <a href="#actual_green_carry">Actual Green Coffee Cost (Projected Carry)</a><br /></body>
+    <img id="coffeeCup" src="coffeecup.png"alt="Coffee Cup" >
+    <div class="links">
+      <ol>
+        <li><a href = "#weight_converter">Weight Converter</a></li>
+        <li><a href="#roast_loss_calculator">Roast Loss Calculator</a></li>
+        <li><a href="#projected_coffee_runout">Projected Coffee Runout</a></li>
+        <li><a href="#actual_green_coffee">Actual Green Coffee Cost (Freight)</a></li>
+      </ol>
     </div>
+  </body>
+    
 
     <main>
       <header>
@@ -50,11 +53,11 @@
       <input type="text" id="shrinkage" />Estimated Shrinkage(%)<br />
 
       <button type="button" id="button" onclick="calc()">Calculate</button>
-      <button type="reset" value="Reset">Clear</button>
       <br />
       Total Roasted Weight:<br />
       <input type="text" value="" id="s1">
       <button onclick="copyClipboard()">Copy text</button>
+      <button type="reset" value="Reset">Clear</button>
   
       <div id="result" style="display: none;"></div>
     </form>
@@ -72,10 +75,11 @@
       <input type="text" id="weekly" />Weekly Coffee Sold<br />
 
       <button type="button" id="button2" onclick="runout()">Calculate</button>
-      <button type="reset" value="Reset">Clear</button>
       <br />
       Projected Runout (weeks):<br />
       <input type="text" value="" id="s2">
+      <button onclick="copyClipboard2()">Copy text</button>
+      <button type="reset" value="Reset">Clear</button>
       <div id="result2" style="display: none;"></div>
     </form>
 
@@ -94,79 +98,15 @@
       <input type="text" id="weight-bag" />Weight per bag (kg)<br />
 
       <button type="button" id="button3" onclick="actual()">Calculate</button>
-      <button type="reset" value="Reset">Clear</button>
       <br />
       Actual Green Coffee Cost:<br />
-    </form>
-
-    <div id="result3"></div>
-
-    <h2 id="actual_green_carry">5. Actual Green Coffee Cost (Projected Carry)</h2>
-    <p class="fourth">
-      In the decision-making process of green coffee contracts, understanding
-      the potential carry charges over the lifespan of that particular coffee is
-      crucial. Incorporate Calc. 3. (freight) above for a truer cost evaluation.
-      Use Calc. 2 (runout) to estimate the per month release schedule below.
-    </p>
-
-    <form id="actual-carry">
-      <input type="text" id="green-cost2" />Green Coffee / lb.<br />
-      <input type="text" id="number-bags" />Number of Bags
-      <br />
-
-      <input type="text" id="weight-bag" />Weight per bag (kg)<br />
-      <input type="text" id="carry" />Carry Rate (%)<br />
-      <table>
-        <tr>
-          <th>1st Month (0%)</th>
-          <th>2nd Month (1.3%)</th>
-          <th>3rd Month (2.6%)</th>
-          <th>4th Month (3.9%)</th>
-        </tr>
-        <td>
-          <input
-            type="text"
-            id="bags-contract"
-            placeholder="# of bags released"
-          />
-        </td>
-        <td>
-          <input
-            type="text"
-            id="bags-contract"
-            placeholder="# of bags released"
-          />
-        </td>
-        <td>
-          <input
-            type="text"
-            id="bags-contract"
-            placeholder="# of bags released"
-          />
-        </td>
-        <td>
-          <input
-            type="text"
-            id="bags-contract"
-            placeholder="# of bags released"
-          />
-        </td>
-      </table>
-      <button type="button" id="button3" onclick="actual()">Calculate</button>
+      <input type="text" value="" id="s3">
+      <button onclick="copyClipboard3()">Copy text</button>
       <button type="reset" value="Reset">Clear</button>
-      <br />
-      Actual Green Coffee Cost:<br />
     </form>
 
-    <div id="result3"></div>
+    <div id="result3" style="display: none;"></div>
 
-    <form id="your-name">
-      <h2>Your name here</h2>
-      <p class="first">Please fill in this form.</p>
-
-      <input type="text" placeholder="Your name" />
-      <button>OK!</button>
-    </form>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-/* Color scheme hex code: brown-#553f3a; red-#bb2b2a; baige-#fff9e9; light blue-#ccdee2; blue-4b9ab4*/
 * {
   margin: 0 auto;
   padding: 0;
@@ -35,24 +33,22 @@ h2 {
   color: #444;
   margin-bottom: 20px;
   line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.links {
+  font-size: 15px;
+  margin: 10px;
+}
+
+#coffeeCup {
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding-right: 25px;
 }
 
 #top {
   text-align: center;
-}
-
-#links {
-  font-size: 15px;
-}
-
-#your-name {
-  background-color: #fff9e9;
-  border: 4px solid #444;
-  width: 400px;
-  padding: 25px;
-  margin-top: 30px;
-}
-
-#button {
-  padding: 2px;
 }

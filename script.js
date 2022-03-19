@@ -11,6 +11,26 @@ function copyClipboard() {
   alert("Copied:" + copyText.value);
 }
 
+function copyClipboard2() {
+  var copyText = document.getElementById("s2");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied:" + copyText.value);
+}
+
+function copyClipboard3() {
+  var copyText = document.getElementById("s3");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied:" + copyText.value);
+}
+
 function calc() {
   var a = parseInt(document.querySelector("#green").value);
   var b = parseInt(document.querySelector("#shrinkage").value);
@@ -46,6 +66,7 @@ function actual() {
   calc4 = "$" + (calc3 / calc2).toFixed(2);
 
   document.querySelector("#result3").innerHTML = calc4;
+  document.getElementById('s3').value = calc4;
 }
 // https://www.youtube.com/watch?v=LWoGu5tSeig
 
