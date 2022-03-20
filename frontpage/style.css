@@ -8,7 +8,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,11 +42,27 @@ h2 {
   margin: 10px;
 }
 
-#coffeeCup {
+.navbar {
+  background-color: #444;
+  overflow: hidden;
+}
+
+.navbar a {
   float: left;
-  width: 100px;
-  height: 100px;
-  padding-right: 25px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: #444;
+}
+
+.navbar a.active {
+  background-color: rgb(99, 99, 99);
+  color: white;
 }
 
 #top {
