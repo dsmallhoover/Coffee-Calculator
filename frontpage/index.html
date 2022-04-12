@@ -7,52 +7,77 @@
 
     <link href="style.css" rel="stylesheet" />
     <title>Coffee Calculators</title>
-    <link rel="icon" type="image/x-icon" href="icons8-calculator-64.png">
+    <link rel="icon" type="image/x-icon" href="icons8-calculator-64.png" />
   </head>
   <body>
     <div class="navbar">
-          <a class="active" href="/frontpage/index.html">Coffee Calculators</a>
-          <a href="/buying-guide/guide.html">Buying Guides</a>
+      <a class="active" href="/frontpage/index.html">Coffee Calculators</a>
+      <a href="/buying-guide/guide.html">Buying Guides</a>
     </div>
     <h1 id="top"></h1>
-    <p class="first">
+    <p class="first"></p>
 
-    </p>
- 
     <div class="links">
       <ol>
-        <li><a href = "#weight_converter">Weight Converter</a></li>
+        <li><a href="#weight_converter">Weight Converter</a></li>
         <li><a href="#roast_loss_calculator">Roast Loss Calculator</a></li>
         <li><a href="#projected_coffee_runout">Projected Coffee Runout</a></li>
-        <li><a href="#actual_green_coffee">Actual Green Coffee Cost (Freight)</a></li>
+        <li>
+          <a href="#actual_green_coffee">Actual Green Coffee Cost (Freight)</a>
+        </li>
       </ol>
-      <br>
-      <hr>
+      <br />
+      <hr />
     </div>
 
     <main>
       <header>
-          <h2 id="weight_converter">1. Weight Converter</h2>
+        <h2 id="weight_converter">1. Weight Converter</h2>
       </header>
       <form>
-      <section class="inputs">
+        <section class="inputs">
           <p><b>Pounds:</b></p>
-          <input type="number" name="pounds" id="pounds" class="input" placeholder="Pounds">
-          <p><b>Kilograms:</b></p><input type="number" name="kilograms" id="kilograms" class="input" placeholder="Kilograms">
-          <p><b>Grams:</b></p><input type="number" name="grams" id="grams" class="input" placeholder="Grams">
-          <p><b>Ounces:</b></p><input type="number" name="ounces" id="ounces" class="input" placeholder="Ounces"><br>
+          <input
+            type="number"
+            name="pounds"
+            id="pounds"
+            class="input"
+            placeholder="Pounds"
+          />
+          <p><b>Kilograms:</b></p>
+          <input
+            type="number"
+            name="kilograms"
+            id="kilograms"
+            class="input"
+            placeholder="Kilograms"
+          />
+          <p><b>Grams:</b></p>
+          <input
+            type="number"
+            name="grams"
+            id="grams"
+            class="input"
+            placeholder="Grams"
+          />
+          <p><b>Ounces:</b></p>
+          <input
+            type="number"
+            name="ounces"
+            id="ounces"
+            class="input"
+            placeholder="Ounces"
+          /><br />
           <button type="reset" value="Reset">Clear</button>
-      </section>
-    </form>
-  </main>
-        <br>
-        <hr>
+        </section>
+      </form>
+    </main>
+    <br />
+    <hr />
 
     <h2 id="roast_loss_calculator">2. Roast Loss Calculator</h2>
-      <p class="second">
- 
-      </p>
-    
+    <p class="second"></p>
+
     <form id="roast-calc">
       <input type="text" id="green" />Green Weight(kg)<br />
 
@@ -61,19 +86,17 @@
       <button type="button" id="button" onclick="calc()">Calculate</button>
       <br />
       Total Roasted Weight:<br />
-      <input type="text" value="" id="s1">
+      <input type="text" value="" id="s1" />
       <button onclick="copyClipboard()">Copy text</button>
       <button type="reset" value="Reset">Clear</button>
-  
-      <div id="result" style="display: none;"></div>
+
+      <div id="result" style="display: none"></div>
     </form>
-        <br>
-        <hr>
+    <br />
+    <hr />
 
     <h2 id="projected_coffee_runout">3. Projected Coffee Runout</h2>
-    <p class="second">
-
-    </p>
+    <p class="second"></p>
 
     <form id="runout">
       <input type="text" id="roasted" />Total Roasted Weight<br />
@@ -83,14 +106,14 @@
       <button type="button" id="button2" onclick="runout()">Calculate</button>
       <br />
       Projected Runout (weeks):<br />
-      <input type="text" value="" id="s2">
+      <input type="text" value="" id="s2" />
       <button onclick="copyClipboard2()">Copy text</button>
       <button type="reset" value="Reset">Clear</button>
-      <div id="result2" style="display: none;"></div>
+      <div id="result2" style="display: none"></div>
     </form>
 
-        <br>
-        <hr>
+    <br />
+    <hr />
 
     <h2 id="actual_green_coffee">4. Actual Green Coffee Cost (Freight)</h2>
     <p class="third">
@@ -106,12 +129,12 @@
       <button type="button" id="button3" onclick="actual()">Calculate</button>
       <br />
       Actual Green Coffee Cost:<br />
-      <input type="text" value="" id="s3">
+      <input type="text" value="" id="s3" />
       <button onclick="copyClipboard3()">Copy text</button>
       <button type="reset" value="Reset">Clear</button>
     </form>
 
-    <div id="result3" style="display: none;"></div>
+    <div id="result3" style="display: none"></div>
 
     <script src="script.js"></script>
   </body>
