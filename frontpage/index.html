@@ -79,11 +79,11 @@
     <p class="second"></p>
 
     <form id="roast-calc">
-      <input type="text" id="green" />Green Weight(kg)<br />
+      <input type="text" id="green" required />Green Weight(kg)<br />
 
-      <input type="text" id="shrinkage" />Estimated Shrinkage(%)<br />
+      <input type="text" id="shrinkage" required />Estimated Shrinkage(%)<br />
 
-      <button type="button" id="button" onclick="calc()">Calculate</button>
+      <button type="submit" id="button" onclick="calc()">Calculate</button>
       <br />
       Total Roasted Weight:<br />
       <input type="text" value="" id="s1" />
@@ -99,11 +99,11 @@
     <p class="second"></p>
 
     <form id="runout">
-      <input type="text" id="roasted" />Total Roasted Weight<br />
+      <input type="text" id="roasted" required />Total Roasted Weight<br />
 
-      <input type="text" id="weekly" />Weekly Coffee Sold<br />
+      <input type="text" id="weekly" required />Weekly Coffee Sold<br />
 
-      <button type="button" id="button2" onclick="runout()">Calculate</button>
+      <button type="submit" id="button2" onclick="runout()">Calculate</button>
       <br />
       Projected Runout (weeks):<br />
       <input type="text" value="" id="s2" />
@@ -121,12 +121,12 @@
     </p>
 
     <form id="actual-green">
-      <input type="text" id="green-cost" />Green Coffee / lb.<br />
+      <input type="text" id="green-cost" required />Green Coffee / lb.<br />
 
-      <input type="text" id="bags" />Number of Bags<br />
-      <input type="text" id="weight-bag" />Weight per bag (kg)<br />
+      <input type="text" id="bags" required />Number of Bags<br />
+      <input type="text" id="weight-bag" required />Weight per bag (kg)<br />
 
-      <button type="button" id="button3" onclick="actual()">Calculate</button>
+      <button type="submit" id="button3" onclick="actual()">Calculate</button>
       <br />
       Actual Green Coffee Cost:<br />
       <input type="text" value="" id="s3" />
