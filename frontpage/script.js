@@ -55,18 +55,29 @@ function runout() {
   document.getElementById('s2').value = calcy;
 }
 
-function actual() {
-  var e = parseFloat(document.querySelector("#green-cost").value);
-  var f = parseInt(document.querySelector("#bags").value);
-  var g = parseInt(document.querySelector("#weight-bag").value);
-  var calc2 = g * kg * f;
-  var calc3 = calc2 * e + freight;
-  var calc4;
+function blend() {
+  var bc1 = parseFloat(document.querySelector("#bc1").value);
+  var bc2 = parseFloat(document.querySelector("#bc2").value);
+  var bc3 = parseFloat(document.querySelector("#bc3").value);
+  var bc4 = parseFloat(document.querySelector("#bc4").value);
+  var bc3 = parseFloat(document.querySelector("#bc3").value);
+  
+  var bc1percentage = parseInt(document.querySelector("#bc1percentage").value);
+  var bc2percentage = parseInt(document.querySelector("#bc2percentage").value);
+  var bc3percentage = parseInt(document.querySelector("#bc3percentage").value);
+  var bc4percentage = parseInt(document.querySelector("#bc4percentage").value);
 
-  calc4 = "$" + (calc3 / calc2).toFixed(2);
+  var bc1total = (bc1 * bc1percentage) / 100;
+  var bc2total = (bc2 * bc2percentage) / 100;
+  var bc3total = (bc3 * bc3percentage) / 100;
+  var bc4total = (bc4 * bc4percentage) / 100;
 
-  document.querySelector("#result3").innerHTML = calc4;
-  document.getElementById('s3').value = calc4;
+  var totalBlend;
+  totalBlend = "$" + (bc1total + bc2total + bc3total + bc4total).toFixed(2);
+  
+  document.querySelector("#result3").innerHTML = totalBlend;
+  document.getElementById('s3').value = totalBlend;
+
 }
 // https://www.youtube.com/watch?v=LWoGu5tSeig
 
