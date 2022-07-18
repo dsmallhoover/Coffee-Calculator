@@ -157,8 +157,30 @@
       <button onclick="copyClipboard3()">Copy text</button>
       <button type="reset" value="Reset">Clear</button>
     </form>
-
     <div id="result3" style="display: none"></div>
+
+    <br />
+    <hr />
+
+    <h2 id="roast_schedule_calculator">5. Roast Schedule Calculator</h2>
+    <p class="second"></p>
+
+    <form id="roast-calc">
+      <input type="text" id="green" required />
+      <label for="green">Green Weight(kg)</label><br />
+
+      <input type="text" id="shrinkage" required />
+      <label for="shrinkage">Estimated Shrinkage(%)</label><br />
+
+      <button type="button" id="button" onclick="calc()">Calculate</button>
+      <br />
+      <label for="s1">Total Roasted Weight:</label><br />
+      <input type="text" value="" id="s1" name="totalRoasted" />
+      <button onclick="copyClipboard()">Copy text</button>
+      <button type="reset" value="Reset">Clear</button>
+
+      <div id="result" style="display: none"></div>
+    </form>
 
     <script src="script.js"></script>
   </body>
