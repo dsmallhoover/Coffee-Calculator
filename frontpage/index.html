@@ -165,12 +165,21 @@
     <h2 id="roast_schedule_calculator">5. Roast Schedule Calculator</h2>
     <p class="second"></p>
 
-    <form id="roast-calc">
-      <input type="text" id="green" required />
-      <label for="green">Green Weight(kg)</label><br />
+    <form id="roast-schedule">
+      <input type="text" id="roh" required />
+      <label for="roh">Roasted On Hand (ROH)</label><br />
 
-      <input type="text" id="shrinkage" required />
-      <label for="shrinkage">Estimated Shrinkage(%)</label><br />
+      <input type="text" id="ordered" required />
+      <label for="ordered">Total Ordered</label><br />
+
+      <input type="text" id="scheduled" required />
+      <label for="scheduled">Scheduled Roast Output</label><br />
+
+      <input type="text" id="scheduleTotal" required />
+      <label for="scheduleTotal">Total After Scheduled Roast</label><br />
+
+      <input type="text" id="surplusShortage" required />
+      <label for="surplusShortage">Surplus / Shortage</label><br />
 
       <button type="button" id="button" onclick="calc()">Calculate</button>
       <br />
