@@ -181,14 +181,14 @@
       <input type="text" id="surplusShortage" required />
       <label for="surplusShortage">Surplus / Shortage</label><br />
 
-      <button type="button" id="button" onclick="calc()">Calculate</button>
+      <button type="button" id="button" onclick="roastSchedule()">
+        Calculate
+      </button>
       <br />
-      <label for="s1">Total Roasted Weight:</label><br />
-      <input type="text" value="" id="s1" name="totalRoasted" />
       <button onclick="copyClipboard()">Copy text</button>
       <button type="reset" value="Reset">Clear</button>
 
-      <div id="result" style="display: none"></div>
+      <div id="resultTotal" style="display: none"></div>
     </form>
 
     <script src="script.js"></script>

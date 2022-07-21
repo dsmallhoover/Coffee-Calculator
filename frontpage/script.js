@@ -1,5 +1,4 @@
 const kg = 2.20462;
-const freight = 200;
 
 function copyClipboard() {
   var copyText = document.getElementById("s1");
@@ -79,6 +78,21 @@ function blend() {
   document.getElementById('s3').value = totalBlend;
 
 }
+
+function roastSchedule() {
+  var roh = parseFloat(document.querySelector("#roh").value);
+  var ordered = parseFloat(document.querySelector("#ordered").value);
+  var scheduled = parseFloat(document.querySelector("#scheduled").value);
+  
+  var scheduleTotal;
+  scheduleTotal = ((roh + scheduled) - ordered).toFixed(2);
+  
+  document.querySelector("#resultTotal").innerHTML = scheduleTotal;
+  document.getElementById('scheduleTotal').value = scheduleTotal;
+
+}
+
+
 // https://www.youtube.com/watch?v=LWoGu5tSeig
 
 const poundsInput = document.getElementById("pounds");
