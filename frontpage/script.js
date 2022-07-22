@@ -85,10 +85,14 @@ function roastSchedule() {
   var scheduled = parseFloat(document.querySelector("#scheduled").value);
   
   var scheduleTotal;
-  scheduleTotal = ((roh + scheduled) - ordered).toFixed(2);
+  scheduleTotal = (roh + scheduled).toFixed(2);
+
+  var surplusShortage;
+  surplusShortage = scheduleTotal - ordered;
   
   document.querySelector("#resultTotal").innerHTML = scheduleTotal;
   document.getElementById('scheduleTotal').value = scheduleTotal;
+  document.getElementById('surplusShortage').value = surplusShortage;
 
 }
 
