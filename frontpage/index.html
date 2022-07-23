@@ -175,20 +175,21 @@
       <input type="text" id="scheduled" required />
       <label for="scheduled">Scheduled Roast Output</label><br />
 
-      <input type="text" id="scheduleTotal" required />
-      <label for="scheduleTotal">Total After Scheduled Roast</label><br />
-
-      <input type="text" id="surplusShortage" required />
-      <label for="surplusShortage">Surplus / Shortage</label><br />
-
       <button type="button" id="button" onclick="roastSchedule()">
         Calculate
       </button>
-      <br />
-      <button onclick="copyClipboard()">Copy text</button>
-      <button type="reset" value="Reset">Clear</button>
 
       <div id="resultTotal" style="display: none"></div>
+      <br />
+
+      <label for="scheduleTotal">Total After Scheduled Roast:</label><br />
+      <input type="text" id="scheduleTotal" required /><br />
+
+      <label for="surplusShortage">Surplus / Shortage:</label><br />
+      <input type="text" id="surplusShortage" required /><br />
+
+      <button onclick="copyClipboard()">Copy text</button>
+      <button type="reset" value="Reset">Clear</button>
     </form>
 
     <script src="script.js"></script>
