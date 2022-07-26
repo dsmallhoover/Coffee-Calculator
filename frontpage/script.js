@@ -30,6 +30,56 @@ function copyClipboard3() {
   alert("Copied:" + copyText.value);
 }
 
+function copyClipboard4() {
+  var copyText = document.getElementById("surplusShortage");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied:" + copyText.value);
+}
+
+// https://www.youtube.com/watch?v=LWoGu5tSeig
+
+const poundsInput = document.getElementById("pounds");
+const kilogramsInput = document.getElementById("kilograms");
+const gramsInput = document.getElementById("grams");
+const ouncesInput = document.getElementById("ounces");
+
+const inputs = document.getElementsByClassName("input");
+
+for (let i = 0; i < inputs.length; i++) {
+  let input = inputs[i];
+
+  input.addEventListener("input", function (e) {
+    let value = parseFloat(e.target.value);
+
+   switch (e.target.name) {
+     case "pounds":
+      kilogramsInput.value = (value / 2.20462).toFixed(4);
+      gramsInput.value = (value * 453.59).toFixed(2);
+      ouncesInput.value = (value * 16).toFixed(2);
+       break;
+      case "kilograms":
+       poundsInput.value = (value * 2.20462).toFixed(3);
+       gramsInput.value = (value * 1000).toFixed(2);
+       ouncesInput.value = (value * 35.274).toFixed(2);
+        break;
+      case "grams":
+       poundsInput.value = (value / 453.59).toFixed(3);
+       kilogramsInput.value = (value / 1000).toFixed(4);
+       ouncesInput.value = (value * 0.035274).toFixed(2);
+          break;
+      case "ounces":
+            poundsInput.value = (value / 16).toFixed(3);
+            kilogramsInput.value = (value / 35.274).toFixed(4);
+            gramsInput.value = (value / .0353).toFixed(2);
+               break;
+   }
+  });
+}
+
 function calc() {
   var a = parseInt(document.querySelector("#green").value);
   var b = parseInt(document.querySelector("#shrinkage").value);
@@ -97,42 +147,3 @@ function roastSchedule() {
 }
 
 
-// https://www.youtube.com/watch?v=LWoGu5tSeig
-
-const poundsInput = document.getElementById("pounds");
-const kilogramsInput = document.getElementById("kilograms");
-const gramsInput = document.getElementById("grams");
-const ouncesInput = document.getElementById("ounces");
-
-const inputs = document.getElementsByClassName("input");
-
-for (let i = 0; i < inputs.length; i++) {
-  let input = inputs[i];
-
-  input.addEventListener("input", function (e) {
-    let value = parseFloat(e.target.value);
-
-   switch (e.target.name) {
-     case "pounds":
-      kilogramsInput.value = (value / 2.20462).toFixed(4);
-      gramsInput.value = (value * 453.59).toFixed(2);
-      ouncesInput.value = (value * 16).toFixed(2);
-       break;
-      case "kilograms":
-       poundsInput.value = (value * 2.20462).toFixed(3);
-       gramsInput.value = (value * 1000).toFixed(2);
-       ouncesInput.value = (value * 35.274).toFixed(2);
-        break;
-      case "grams":
-       poundsInput.value = (value / 453.59).toFixed(3);
-       kilogramsInput.value = (value / 1000).toFixed(4);
-       ouncesInput.value = (value * 0.035274).toFixed(2);
-          break;
-      case "ounces":
-            poundsInput.value = (value / 16).toFixed(3);
-            kilogramsInput.value = (value / 35.274).toFixed(4);
-            gramsInput.value = (value / .0353).toFixed(2);
-               break;
-   }
-  });
-}
