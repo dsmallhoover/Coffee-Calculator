@@ -71,3 +71,16 @@ h2 {
 #top {
   text-align: center;
 }
+
+@media screen and (max-width: 424px) {
+  #estimatedShrinkage {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  #actual-green {
+    display: grid;
+    justify-content: left;
+  }
+}

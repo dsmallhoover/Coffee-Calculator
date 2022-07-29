@@ -104,10 +104,14 @@
 
     <form id="roast-calc">
       <input type="text" id="green" required />
-      <label for="green">Green Weight(kg)</label><br />
+      <label for="green"
+        ><span id="estimatedShrinkage">Green Weight(kg)</span></label
+      ><br />
 
       <input type="text" id="shrinkage" required />
-      <label for="shrinkage">Estimated Shrinkage(%)</label><br />
+      <label for="shrinkage"
+        ><span id="estimatedShrinkage">Estimated Shrinkage(%)</span></label
+      ><br />
 
       <button type="button" id="button" onclick="calc()">Calculate</button>
       <br />
@@ -183,13 +187,19 @@
 
     <form id="roast-schedule">
       <input type="text" id="roh" required />
-      <label for="roh">Roasted On Hand (ROH)</label><br />
+      <label for="roh"
+        ><span id="estimatedShrinkage">Roasted On Hand (ROH)</span> </label
+      ><br />
 
       <input type="text" id="ordered" required />
-      <label for="ordered">Total Ordered</label><br />
+      <label for="ordered"
+        ><span id="estimatedShrinkage">Total Ordered</span></label
+      ><br />
 
       <input type="text" id="scheduled" required />
-      <label for="scheduled">Scheduled Roast Output</label><br />
+      <label for="scheduled"
+        ><span id="estimatedShrinkage">Scheduled Roast Output</span></label
+      ><br />
 
       <button type="button" id="button" onclick="roastSchedule()">
         Calculate
